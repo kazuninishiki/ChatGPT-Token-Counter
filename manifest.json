@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "ChatGPT Token Counter",
+    "version": "1.0",
+    "description": "Displays the token count in the ChatGPT input box.",
+    "permissions": ["activeTab", "scripting"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "icons": {
+    "128": "icon.png"
+  },
+    "content_scripts": [
+      {
+        "matches": ["https://chatgpt.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
